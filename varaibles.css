@@ -1,7 +1,10 @@
 
 
 :root {
-  --colour-cream: #f3ede0;
-  --colour-text-dark: #1a1a1a;
-  
+  /*--colour-bg-cream: #f3ede0;*/
+  --colour-bg-cream: #f0e1c0;
+  --colour-bg-bluelight: #d5ddeb;
+  --colour-text-dark: #3a3a3a;
+  --colour-text-light: #666666;
+  --colour-text-gold: #e3a000;
 }
