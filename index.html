@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="UTF-8">
@@ -10,6 +9,15 @@
     <link rel="stylesheet" href="varaibles.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    window.addEventListener("load", async (event) => {
+      console.log("page is fully loaded");
+      const views = await (await fetch('https://api.oculux.io/views')).json();
+      const videos = await (await fetch('https://api.oculux.io/videos')).json();
+      document.getElementById('views').innerText = views.views
+      document.getElementById('videos').innerText = videos.videos
+    });
+    </script>
   </head>
   <body>
     <header>
@@ -36,24 +44,24 @@
             <button class="blue disabled">Documentation</button>
           </div>
           <div class="links">
-            <a href="https://x.com/decentranetlabs"><div class="link"><img class="x" src="linkicon_x.png" /></div></a>
-            <a href="https://discord.gg/nchPwrjPfn"><div class="link"><img class="dc" src="linkicon_discord.png" /></div></a>
-            <a href="https://github.com/DecentraNet-Labs"><div class="link"><img class="gh" src="linkicon_github.png" /></div></a>
-            <img class="sponsor" src="dnetlogo_wide.png" />
+            <a href="https://x.com/decentranetlabs" target="_blank"><div class="link"><img class="x" src="linkicon_x.png" /></div></a>
+            <a href="https://discord.gg/nchPwrjPfn" target="_blank"><div class="link"><img class="dc" src="linkicon_discord.png" /></div></a>
+            <a href="https://github.com/DecentraNet-Labs" target="_blank"><div class="link"><img class="gh" src="linkicon_github.png" /></div></a>
+            <a href="https://decentranetlabs.net/" target="_blank"><img class="sponsor" src="dnetlogo_wide.png" /></a>
           </div>
         </div>
         <div class="r">
           <div class="stat">
-            <div class="value">
-              1,395
+            <div id="videos" class="value">
+              &nbsp;
             </div>
             <div class="info">
               Unique Files Played
             </div>
           </div>
           <div class="stat">
-            <div class="value">
-              1,034,821
+            <div id="views" class="value">
+              &nbsp;
             </div>
             <div class="info">
               Total Views
@@ -68,7 +76,7 @@
           </div>
           <div class="content">
             <div class="l">
-              Built by <a href="#">DNet Labs</a>, Oculux facilites the management, distribution, and <b>playback of decentralized video on Jackal Cloud</b>. 
+              Built by <a href="https://decentranetlabs.net/" target="_blank">DNet Labs</a>, Oculux facilites the management, distribution, and <b>playback of decentralized video on Jackal Cloud</b>. 
               This project is still in its early phases of development; however, a beta version of both the Oculux Player & Oculux Web is available for use.
               The Oculux suite will offer various tiers of file <b>security</b>, handle relevant extended <b>metadata</b>, facilitate the <b>development and integration</b> experience, and enables people to effectively view decentralized video from either <b>Web2.0 or Web3.0</b> environments.
               As it is still in the early phases of development, there will be missing features, there will be bugs, and there will be questions, all of which will be resolved one step at a time.

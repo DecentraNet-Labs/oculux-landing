@@ -118,6 +118,7 @@ section.home {
     display: flex;
     flex-direction: column;
     gap: 70px;
+    height: calc(100% + 1px);
     
     & > .stat {
       font-family: Tahoma, Geneva, Verdana, sans-serif;
@@ -165,13 +166,19 @@ section.home .links {
   align-items: center;
   padding-left: 10px;
 
+  & a {
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+
   & div.link {
     height: 48px;
     width: 48px;
     border: 2.5px solid #000;
     cursor: pointer;
     display: flex;
-    
+
     & > img {
       margin: auto;
     }
